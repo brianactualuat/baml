@@ -1,0 +1,6 @@
+# Aider configuration for brianactualuat/baml
+read:
+  - .aider/CONVENTIONS.md
+
+# Default model configuration
+model: gpt-4o
