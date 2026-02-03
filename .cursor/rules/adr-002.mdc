@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt Intermediate Representation (IR) for Multi-Language Code Generation in CI/CD Pipeline
+
+## Policies
+
+1. Implement an Intermediate Representation (IR) layer that sits between the BAML specification parser and language-specific code generators. The IR serves as a canonical, language-agnostic representation of the parsed BAML specifications. All language generators (e.g., Ruby generator in `ir_to_rb`) consume this IR rather than the raw AST or specification files. The IR includes type information, class structures, and other semantic elements that are validated once and then transformed into target language code. Testing infrastructure (asserts.rs, mermaid_graph_tests.rs) operates on the IR level to ensure correctness before code generation.
