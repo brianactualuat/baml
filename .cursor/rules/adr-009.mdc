@@ -1,0 +1,10 @@
+---
+globs: ["integ-tests/go/**"]
+alwaysApply: false
+---
+
+# Adopt Go's Native Concurrency Model with Goroutines and Channels for Integration Testing
+
+## Policies
+
+1. Adopt Go's native concurrency model using goroutines and channels as the standard paradigm for integration testing. This decision applies to all integration tests including API testing, performance testing, and reliability testing (retries/fallbacks). Tests leverage goroutines for parallel execution and channels for synchronization and communication between concurrent test operations.

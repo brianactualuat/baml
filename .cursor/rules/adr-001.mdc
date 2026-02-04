@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Multi-Language Client SDK Architecture with FFI Bridge Pattern
+
+## Policies
+
+1. Adopt a Foreign Function Interface (FFI) bridge architecture with language-specific client wrappers. The core BAML engine is implemented in a systems language (Rust) and exposed through C-compatible FFI boundaries. Each target language (Go, TypeScript) implements a client SDK that wraps the FFI layer with idiomatic language constructs. This includes: (1) C header files defining the FFI contract (baml_cffi_wrapper.h), (2) Protocol Buffer definitions for cross-language data serialization (baml_inbound.pb.go), (3) Language-specific type mapping and serialization layers (type_map.go, serde), (4) Callback mechanisms for bidirectional communication (callbacks.go), (5) Utility functions for handling raw objects and type conversions (raw_objects/utils.go), and (6) Generated code templates for consistent API surfaces (globals.ts).
