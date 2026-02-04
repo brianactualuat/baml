@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Multi-Language Client Library Architecture with Platform-Specific Bindings
+
+## Policies
+
+1. Implement a core Rust engine with language-specific client libraries using FFI (Foreign Function Interface) bindings and platform-specific conditional compilation. The architecture consists of: (1) A core Rust engine (baml-lib) that contains the primary business logic, (2) CFFI wrapper layer (language_client_cffi) with raw pointer management for safe cross-language memory handling, (3) Language-specific client libraries (Go, TypeScript) that provide idiomatic interfaces to their respective ecosystems, (4) Platform-specific implementations using conditional compilation for OS-specific behavior, and (5) Comprehensive test infrastructure including bytecode tests to ensure cross-language compatibility.
