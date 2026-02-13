@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Use Intermediate Representation (IR) for Multi-Language API Code Generation
+
+## Policies
+
+1. Adopt an Intermediate Representation (IR) layer as the canonical model for API definitions, with language-specific generators that transform IR to target language code. The IR serves as a language-agnostic abstraction that captures type aliases, enums, functions, and data structures. Each language generator (Ruby, Rust, etc.) implements IR-to-language transformations, handling language-specific concerns like type mapping, naming conventions, and FFI bindings independently. This creates a pipeline: Source Definition → IR → Language-Specific Code.
