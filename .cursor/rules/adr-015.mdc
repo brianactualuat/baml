@@ -1,0 +1,10 @@
+---
+globs: ["engine/language_client_go/**"]
+alwaysApply: false
+---
+
+# Use C FFI Wrapper for Go Language Client External API
+
+## Policies
+
+1. Implement a C Foreign Function Interface (FFI) wrapper layer as the bridge between Go language clients and the BAML engine. This architecture uses C as an intermediate ABI-stable layer, with Go bindings (baml_cffi_wrapper.h) that wrap the C interface, callback mechanisms (callbacks.go) for bidirectional communication, and utility functions (raw_objects/utils.go) for data marshaling and type conversion between Go and the native engine.
