@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Structured Console Logging for Development and Debugging Across Multi-Language Codebase
+
+## Policies
+
+1. Implement console-based logging throughout the codebase as the primary observability mechanism for development and debugging. This includes: (1) Using language-native console/logging facilities (console.log in TypeScript, println/log in Go, println!/log in Rust), (2) Logging at key integration points including cache operations, data transformations, and UI state changes, (3) Maintaining consistent logging patterns across language boundaries to enable cross-component tracing, (4) Focusing logging on actionable debugging information rather than production telemetry.
