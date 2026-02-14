@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Implement Real-Time Logging for Interactive Development Boundaries
+
+## Policies
+
+1. Adopt real-time logging mechanisms at all interactive development boundaries, specifically: WebSocket handlers, JavaScript callback providers, and VSCode extension communication layers. This decision mandates that logging events are emitted synchronously or with minimal buffering at these boundary points, ensuring that log messages are immediately available to developers through their development tools. The implementation uses structured logging that captures context-specific metadata (connection IDs, callback types, message payloads) and routes logs through appropriate channels (WebSocket streams for playground, console for JS callbacks, output channels for VSCode). This approach treats logging as a first-class feature of the developer experience rather than purely an operational concern.

@@ -1,0 +1,10 @@
+---
+globs: ["integ-tests/go/**"]
+alwaysApply: false
+---
+
+# Adopt Table-Driven Testing Pattern for Integration Tests
+
+## Policies
+
+1. Implement table-driven testing as the standard pattern for integration tests in Go. This approach uses data structures (typically slices of structs) to define test cases with inputs, expected outputs, and test metadata. Each test function iterates over the table entries, executing the same test logic with different parameters. This pattern is idiomatic in Go and provides a declarative way to specify test scenarios, making it easy to add new test cases without duplicating test logic.
