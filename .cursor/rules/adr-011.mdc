@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt Mock-Based Testing Strategy for FFI Boundary and Core Library Components
+
+## Policies
+
+1. Implement a comprehensive mocking framework for testing FFI boundaries and library components. This includes: (1) creating mock implementations for media handling and data collection components at the FFI boundary, (2) establishing common test utilities and fixtures in a shared test module structure, (3) using mocks to simulate external dependencies and control test conditions, and (4) applying mocking consistently across both unit tests (bytecode_tests) and integration test scenarios. The mocking strategy is applied specifically at architectural boundaries where the system interfaces with external components or crosses language barriers.

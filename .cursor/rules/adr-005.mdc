@@ -1,0 +1,10 @@
+---
+globs: ["typescript/packages/playground-common/src/**"]
+alwaysApply: false
+---
+
+# Adopt Environment-Aware Configuration Management with Input Validation for Playground Components
+
+## Policies
+
+1. Implement a centralized configuration and environment management pattern with integrated input validation across all playground components. This includes: (1) Environment-aware configuration loading that adapts to runtime contexts, (2) Strict input validation at component boundaries, particularly for API keys and user-provided data, (3) Consistent validation patterns across test panels, notification systems, and response renderers, (4) Security-first approach to handling sensitive configuration data with validation guards before processing.
