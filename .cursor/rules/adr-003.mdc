@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt CFFI Raw Pointer Wrapper Pattern for Cross-Language FFI Boundary
+
+## Policies
+
+1. Implement a raw pointer wrapper pattern for all FFI-exposed types in the language_client_cffi module. This pattern encapsulates Rust objects behind opaque C-compatible raw pointers, providing a safe abstraction layer that manages object lifetimes explicitly through constructor/destructor pairs. The pattern is consistently applied across multiple domain objects (media, collector, and test infrastructure) to create a uniform FFI surface that foreign language clients can safely interact with. Each wrapper type provides explicit memory management functions and ensures proper cleanup of Rust resources.

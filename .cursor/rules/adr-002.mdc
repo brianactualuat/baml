@@ -1,0 +1,10 @@
+---
+globs: ["typescript/packages/playground-common/src/features/**"]
+alwaysApply: false
+---
+
+# Adopt Message Queue Boundaries for Public API Integration in Playground Components
+
+## Policies
+
+1. Implement message queue boundaries as the primary integration pattern for public APIs across playground components. This architectural decision establishes message queues as the standard mechanism for inter-component communication, particularly for features like detail panels, graph layout algorithms, and edge rendering. Components expose public APIs through message-based interfaces rather than direct function calls, creating clear boundaries that decouple producers from consumers and enable asynchronous processing where beneficial.

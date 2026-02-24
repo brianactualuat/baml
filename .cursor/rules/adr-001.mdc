@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Consistent Public API Interface Pattern Across Frontend and Backend Components
+
+## Policies
+
+1. Establish a unified public API interface pattern that is consistently applied across all external-facing components, from frontend UI elements to backend runtime types. This pattern enforces standardized data access patterns, type definitions, and interface contracts that remain stable across the TypeScript playground components and Rust runtime engine. The decision mandates that all components exposing public APIs (DetailPanel, graph layout metadata, edge points, test items, and runtime responses) follow the same structural conventions for data access, ensuring predictable behavior and reducing integration complexity.

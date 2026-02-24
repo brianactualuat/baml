@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt Protocol-Based Public API Design for External Integration Testing
+
+## Policies
+
+1. Implement a protocol-based public API architecture where external integrations interact through well-defined, testable protocols rather than ad-hoc interfaces. This decision manifests in: (1) Standardized test protocols that validate public API contracts across parsing, error handling, and type system interactions; (2) Build-time protocol validation in the Rust generator to ensure API consistency; (3) Explicit protocol definitions for enum handling, panic scenarios, and parsing behaviors that external consumers depend on; (4) Test-driven protocol specifications that serve as both validation and documentation for external API consumers.

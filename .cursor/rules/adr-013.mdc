@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt Raw Pointer Wrapper Pattern for FFI Boundary Safety in Language Client
+
+## Policies
+
+1. Implement a raw pointer wrapper pattern as a dedicated abstraction layer for all FFI-exposed types. This pattern encapsulates Rust objects behind opaque raw pointers with explicit lifetime management, providing type-safe wrappers that handle pointer conversion, validation, and cleanup. The pattern is consistently applied across FFI boundary types (media, collector, and other runtime objects) with standardized construction, access, and destruction methods. This creates a uniform interface for language clients while isolating unsafe FFI operations within well-defined wrapper modules.

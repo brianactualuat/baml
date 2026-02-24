@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt Structured Logging with Callback-Based Log Collection for Runtime Observability
+
+## Policies
+
+1. Implement a callback-based structured logging architecture where log events are captured through a provider pattern (js_callback_provider) and collected via dedicated log collectors (test_log_collector). This approach enables dynamic log routing where logs can be streamed to WebSocket clients, captured in test assertions, or forwarded to monitoring systems. The logging system is integrated at key architectural boundaries: server initialization (playground_barebones.rs, server.rs), request handlers (websocket_ws.rs, webview_rpc.rs), runtime execution (js_callback_provider.rs), and testing infrastructure (test_log_collector.rs).

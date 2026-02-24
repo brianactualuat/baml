@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt External HTTP Client Libraries for Runtime Binary Distribution and Testing Infrastructure
+
+## Policies
+
+1. Integrate established external HTTP client libraries (likely reqwest or similar) as the standard mechanism for all external network communication, particularly for binary downloads, CLI testing infrastructure, and runtime resource management. This decision establishes external HTTP clients as first-class architectural components at system boundaries, rather than implementing custom networking solutions or using lower-level APIs.

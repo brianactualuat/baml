@@ -1,0 +1,10 @@
+---
+globs: ["typescript/packages/playground-common/src/features/**"]
+alwaysApply: false
+---
+
+# Adopt Execution State Synchronization Pattern for External API Integration in Playground Components
+
+## Policies
+
+1. Implement a centralized execution synchronization pattern using a custom React hook (useExecutionSync) that manages the lifecycle of external API calls and execution state. This hook serves as a service boundary abstraction that encapsulates the complexity of synchronizing execution state between the frontend playground components and external backend APIs. The pattern ensures that execution logs and detail panels consume execution state through a consistent interface, providing real-time updates while maintaining a clear separation between UI components and external service integration logic.

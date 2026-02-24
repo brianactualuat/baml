@@ -1,0 +1,10 @@
+---
+globs: ["engine/**"]
+alwaysApply: false
+---
+
+# Adopt Callback-Based Logging Architecture with Mock Support for Testing
+
+## Policies
+
+1. Implement a callback-based logging provider pattern where logging events are emitted through registered callback functions rather than directly to concrete logging implementations. This architecture uses dependency injection to provide logging callbacks at runtime, allowing different consumers (test collectors, websocket handlers, UI components) to register their own handlers. The pattern includes: (1) A common logging interface that accepts callback providers, (2) Mock/test implementations that collect logs for verification, (3) Production implementations that route to appropriate destinations (websockets, files, monitoring systems), and (4) Language-specific bindings that maintain consistent behavior across Go and Rust implementations.
